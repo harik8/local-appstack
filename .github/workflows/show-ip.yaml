@@ -3,9 +3,11 @@ name: CI
 on:
   push:
     branches:
-    - '**'
+    - main
+    - DEV-*
     paths:
     - show-ip/**
+    - .github/workflows/show-ip.yaml
   pull_request:
     branches:
     - main
