@@ -3,8 +3,7 @@ name: CI
 on:
   push:
     branches:
-    - main
-    - DEV-*
+    - '**'
     paths:
     - show-ip/**
   pull_request:
