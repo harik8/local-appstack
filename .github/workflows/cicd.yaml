@@ -80,14 +80,14 @@ jobs:
 
     - name: Deploy
       run: |
-        sed -i "s/^name: .*/name: show-ip/" cicd-template/Chart.yaml
+        sed -i "s/^name: .*/name: show-ip-ex/" cicd-template/Chart.yaml
         sed -i "s/^appVersion: .*/appVersion: latest/" cicd-template/Chart.yaml
 
         helm upgrade --install \
           --atomic \
           --create-namespace \
-          --namespace show-ip-external \
-          --set image.tag=latest \
+          --namespace show-ip-ex \
+          --set image.tag=external \
           -f show-ip/.github/values.yaml -f show-ip/.github/sandbox/values.yaml \
-          show-ip cicd-template
+          show-ip-ex cicd-template
 
