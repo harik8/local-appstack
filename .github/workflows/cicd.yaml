@@ -44,7 +44,7 @@ jobs:
       with:
         context: show-ip
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/show-ip:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/show-ip:external
         platforms: linux/amd64,linux/arm64
 
     # Verify that the Docker image is built
@@ -86,7 +86,7 @@ jobs:
         helm upgrade --install \
           --atomic \
           --create-namespace \
-          --namespace show-ip \
+          --namespace show-ip-external \
           --set image.tag=latest \
           -f show-ip/.github/values.yaml -f show-ip/.github/sandbox/values.yaml \
           show-ip cicd-template

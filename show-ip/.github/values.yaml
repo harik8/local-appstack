@@ -8,7 +8,7 @@ image:
   repository: harik8/show-ip
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: external
 
 imagePullSecrets: []
 nameOverride: ""
