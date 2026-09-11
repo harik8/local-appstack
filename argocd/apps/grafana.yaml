@@ -15,7 +15,7 @@ spec:
         valueFiles:
           - $values/addons/charts/grafana/wsl.yaml
     - repoURL: https://github.com/harik8/manalpetti
-      targetRevision: main
+      targetRevision: chore/upgrade-grafana
       ref: values
   destination:
     server: https://kubernetes.default.svc
