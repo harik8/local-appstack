@@ -15,7 +15,7 @@ spec:
         valueFiles:
           - $values/addons/charts/cnpg/wsl.yaml
     - repoURL: https://github.com/harik8/manalpetti
-      targetRevision: main
+      targetRevision: fix/cnpg-poolers-1
       ref: values
   destination:
     server: https://kubernetes.default.svc
